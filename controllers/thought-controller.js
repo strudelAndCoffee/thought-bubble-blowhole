@@ -83,13 +83,8 @@ const thoughtController = {
                 { $pull: { thoughts: thoughtData._id } },
                 { new: true, runValidators: true }
             )
-            .then(userData => {
-                if (!userData) {
-                    res.status(404).json({ message: "No user found with this username." });
-                    return;
-                }
-                res.json(thoughtData)
-            })
+            
+            res.json(thoughtData)
         })
         .catch(err => res.status(400).json(err));
     }
