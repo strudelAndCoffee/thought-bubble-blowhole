@@ -1,7 +1,7 @@
 const { Thought, User } = require('../models');
 
 const thoughtController = {
-    // get all thoughts
+    // GET ALL Thoughts
     getAllThoughts(req, res) {
         Thought.find({})
         .populate({
@@ -14,7 +14,7 @@ const thoughtController = {
         .catch(err => res.status(400).json(err));
     },
 
-    // get thought by ID
+    // GET Thought by ID
     getThoughtById({ params }, res) {
         Thought.findOne({ _id: params.id })
         .populate({
@@ -61,7 +61,7 @@ const thoughtController = {
         })
     },
 
-    // update thought by ID
+    // UPDATE Thought by ID
     updateThought({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.id },
@@ -78,7 +78,7 @@ const thoughtController = {
         .catch(err => res.status(400).json(err));
     },
 
-    // delete thought
+    // DELETE Thought by ID
     deleteThought({ params }, res) {
         Thought.findOneAndDelete({ _id: params.id })
         .then(thoughtData => {
@@ -87,13 +87,15 @@ const thoughtController = {
                 return;
             }
 
+            // remove thought from user's thoughts array
             User.findOneAndUpdate(
                 { username: thoughtData.username },
                 { $pull: { thoughts: thoughtData._id } },
                 { new: true, runValidators: true }
             )
+            .catch(err => res.status(400).json(err));
             
-            res.json(thoughtData)
+            res.json({ message: "Thought removed!" })
         })
         .catch(err => res.status(400).json(err));
     },

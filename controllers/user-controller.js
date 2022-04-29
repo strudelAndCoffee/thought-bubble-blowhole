@@ -1,7 +1,7 @@
 const { User, Thought } = require('../models');
 
 const userController = {
-    // get all users
+    // GET ALL Users
     getAllUsers(req, res) {
         User.find({})
         .populate([
@@ -20,7 +20,7 @@ const userController = {
         .catch(err => res.status(400).json(err));
     },
 
-    // get user by ID
+    // GET User by ID
     getUserById({ params }, res) {
         User.findOne({ _id: params.id })
         .populate([
@@ -44,14 +44,14 @@ const userController = {
         .catch(err => res.status(400).json(err));
     },
 
-    // create user
+    // CREATE User
     createUser({ body }, res) {
         User.create(body)
         .then(userData => res.json(userData))
         .catch(err => res.status(400).json(err));
     },
 
-    // update user by ID
+    // UPDATE User by ID
     updateUser({ params, body }, res) {
         User.findOneAndUpdate(
             { _id: params.id },
@@ -68,7 +68,7 @@ const userController = {
         .catch(err => res.status(400).json(err));
     },
 
-    // delete user
+    // DELETE User
     deleteUser({ params }, res) {
         User.findOneAndDelete({ _id: params.id })
         .then(userData => {
@@ -81,13 +81,15 @@ const userController = {
             Thought.deleteMany({ username: userData.username })
             .then(thoughtData => {
                 console.log(thoughtData);
-                res.json(userData);
             })
+            .catch(err => res.status(400).json(err));
+
+            res.json({ message: "User removed!" });
         })
         .catch(err => res.status(400).json(err));
     },
 
-    // add friend
+    // ADD Friend
     addFriend({ params, body }, res) {
         User.findOneAndUpdate(
             { _id: params.id },
@@ -99,12 +101,12 @@ const userController = {
                 res.status(404).json({ message: "No user found with this ID."});
                 return;
             }
-            res.json(userData)
+            res.json({ message: "Friend added!" })
         })
         .catch(err => res.status(400).json(err));
     },
 
-    // remove friend
+    // REMOVE Friend
     removeFriend({ params, body }, res) {
         User.findOneAndUpdate(
             { _id: params.id },
@@ -116,7 +118,7 @@ const userController = {
                 res.status(404).json({ message: "No user found with this ID."});
                 return;
             }
-            res.json(userData)
+            res.json({ message: "Friend removed!" })
         })
         .catch(err => res.status(400).json(err));
     }
