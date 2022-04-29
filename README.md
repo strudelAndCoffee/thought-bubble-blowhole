@@ -1,6 +1,6 @@
 # Thought Bubble Blowhole
 
-This project demonstrates server-side API routes for a social media app using a NoSQL database.
+This project demonstrates functioning API routes for a social media app using a NoSQL database.
 
 You can view the full walkthrough video here: [demo]()
 
