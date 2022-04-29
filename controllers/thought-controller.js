@@ -1,6 +1,6 @@
 const { Thought } = require('../models');
 
-const thoughtController ={
+const thoughtController = {
     // get all thoughts
     getAllThoughts(req, res) {
         Thought.find({})
@@ -24,7 +24,7 @@ const thoughtController ={
         .select('-__v')
         .then(thoughtData => {
             if (!thoughtData) {
-                res.status(404).json({ message: "Not a valid ID."});
+                res.status(404).json({ message: "No thought found with this ID."});
                 return;
             }
             res.json(thoughtData)
@@ -48,7 +48,7 @@ const thoughtController ={
         )
         .then(thoughtData => {
             if (!thoughtData) {
-                res.status(404).json({ message: "Not a valid ID."});
+                res.status(404).json({ message: "No thought found with this ID."});
                 return;
             }
             res.json(thoughtData)
@@ -61,7 +61,7 @@ const thoughtController ={
         Thought.findOneAndDelete({ _id: params.id })
         .then(thoughtData => {
             if (!thoughtData) {
-                res.status(404).json({ message: "Not a valid ID."});
+                res.status(404).json({ message: "No thought found with this ID."});
                 return;
             }
             res.json(thoughtData)
