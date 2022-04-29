@@ -43,6 +43,6 @@ WHEN I test API POST and DELETE routes in Insomnia
 
 ## Credits
 
-This repository was created to as a weekly challenge for The University of Texas at Austin Code Bootcamp: Web Development course.
+This repository was created to as a weekly challenge for The University of Texas at Austin Code Bootcamp: Full Stack Web Development course.
 
 All code is original and authored by [strudelAndCoffee](https://github.com/strudelAndCoffee), except where cited.
