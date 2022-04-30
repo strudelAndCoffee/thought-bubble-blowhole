@@ -34,20 +34,19 @@ Using API routes, a user can:
 
 ## API Routes and Their Functions
 
-USER Routes
+
+> USER ROUTES:
+
 
 `/api/users`
 
-GET - no JSON body // _gets all Users_
-
+GET - no JSON body // _gets all Users_\
 POST - 'username' and 'email' fields required as JSON // _creates a User_
 
 `/api/users/<User ID>`
 
-GET - no JSON body // _gets single User by ID_
-
-PUT - 'username' and/or 'email' fields required as JSON // _updates field values for single User by ID_
-
+GET - no JSON body // _gets single User by ID_\
+PUT - 'username' and/or 'email' fields required as JSON // _updates field values for single User by ID_\
 DELETE - no JSON body // _deletes a User by ID_
 
 `/api/users/<User ID>/friend`
@@ -59,20 +58,18 @@ PUT - 'friendId' field required as JSON // _adds another User ('friendId') to 'f
 PUT - 'friendId' field required as JSON // _removes another User ('friedId') from 'friends' array of User by ID_
 
 
-THOUGHT Routes
+> THOUGHT ROUTES:
+
 
 `/api/thoughts`
 
-GET - no JSON body // _gets all Thoughts_
-
+GET - no JSON body // _gets all Thoughts_\
 POST - 'thoughtText' and 'username' fields required as JSON // _creates a Thought and adds it to 'thoughts' array of User ('username')_
 
 `/api/thoughts/<Thought ID>`
 
-GET - no JSON body // _gets single Thought by ID_
-
-PUT - 'thoughtText' field required as JSON // _updates 'thoughtText' field value for single Thought by ID_
-
+GET - no JSON body // _gets single Thought by ID_\
+PUT - 'thoughtText' field required as JSON // _updates 'thoughtText' field value for single Thought by ID_\
 DELETE - no JSON body // _deletes a Thought by ID_
 
 `/api/thoughts/<Thought ID>/reactions`
