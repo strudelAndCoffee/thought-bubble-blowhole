@@ -37,46 +37,46 @@ Using API routes, a user can:
 USER Routes
 
 `/api/users`
-```
+
 GET - no JSON body // gets all Users
 POST - 'username' and 'email' fields required as JSON // creates a User
-```
+
 `/api/users/<User ID>`
-```
+
 GET - no JSON body // gets single User by ID
 PUT - 'username' and/or 'email' fields required as JSON // updates single User's data by ID
 DELETE - no JSON body // deletes a User by ID
-```
+
 `/api/users/<User ID>/friend`
-```
+
 PUT - 'friendId' field required as JSON // adds another User ('friedId') to 'friends' array of User by ID (<User ID>)
-```
+
 `/api/users/<User ID>/unfriend`
-```
+
 PUT - 'friendId' field required as JSON // removes another User ('friedId') from 'friends' array of User by ID (<User ID>)
-```
+
 
 THOUGHT Routes
 
 `/api/thoughts`
-```
+
 GET - no JSON body // gets all Thoughts
 POST - 'thoughtText' and 'username' fields required as JSON // creates a Thought and adds it to 'thoughts' array of User ('username')
-```
+
 `/api/thoughts/<Thought ID>`
-```
+
 GET - no JSON body // gets single Thought by ID
 PUT - 'thoughtText' field required as JSON // updates single Thought's 'thoughtText' by ID
 DELETE - no JSON body // deletes a Thought by ID
-```
+
 `/api/thoughts/<Thought ID>/reactions`
-```
+
 PUT - 'reactionBody' and 'username' fields required as JSON // creates a Reaction and adds it to 'reactions' array of Thought by ID 
-```
+
 `/api/thoughts/<Thought ID>/reactions/<Reaction ID>`
-```
+
 PUT - no JSON body // removes a Reaction (<Reaction ID>) from 'reactions' array of Thought by ID (<Thought ID>)
-```
+
 
 ## Project Details
 
