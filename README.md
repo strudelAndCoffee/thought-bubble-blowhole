@@ -6,7 +6,7 @@ You can view the full walkthrough videos here:
 
 [Users and Thoughts demo](https://drive.google.com/file/d/1p1eTLF60LpsoZAaKBMA7V9R0m_sTqfys/view?usp=sharing)
 
-[Reactions and Friends demo](https://drive.google.com/file/d/1GsUVTCQYkHxjWKbC4aq53HS45l-ytUmx/view?usp=sharing)
+[Reactions and Friends demo](https://drive.google.com/file/d/1TDbF2YcPqzXOx49bHrlcPlFfz9xPUPLL/view?usp=sharing)
 
 ## Description
 
