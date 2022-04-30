@@ -38,50 +38,50 @@ USER Routes
 
 `/api/users`
 
-GET - no JSON body // gets all Users
+GET - no JSON body // _gets all Users_
 
-POST - 'username' and 'email' fields required as JSON // creates a User
+POST - 'username' and 'email' fields required as JSON // _creates a User_
 
 `/api/users/<User ID>`
 
-GET - no JSON body // gets single User by ID
+GET - no JSON body // _gets single User by ID_
 
-PUT - 'username' and/or 'email' fields required as JSON // updates single User's data by ID
+PUT - 'username' and/or 'email' fields required as JSON // _updates field values for single User by ID_
 
-DELETE - no JSON body // deletes a User by ID
+DELETE - no JSON body // _deletes a User by ID_
 
 `/api/users/<User ID>/friend`
 
-PUT - 'friendId' field required as JSON // adds another User ('friedId') to 'friends' array of User by ID (<User ID>)
+PUT - 'friendId' field required as JSON // _adds another User ('friendId') to 'friends' array of User by ID_
 
 `/api/users/<User ID>/unfriend`
 
-PUT - 'friendId' field required as JSON // removes another User ('friedId') from 'friends' array of User by ID (<User ID>)
+PUT - 'friendId' field required as JSON // _removes another User ('friedId') from 'friends' array of User by ID_
 
 
 THOUGHT Routes
 
 `/api/thoughts`
 
-GET - no JSON body // gets all Thoughts
+GET - no JSON body // _gets all Thoughts_
 
-POST - 'thoughtText' and 'username' fields required as JSON // creates a Thought and adds it to 'thoughts' array of User ('username')
+POST - 'thoughtText' and 'username' fields required as JSON // _creates a Thought and adds it to 'thoughts' array of User ('username')_
 
 `/api/thoughts/<Thought ID>`
 
-GET - no JSON body // gets single Thought by ID
+GET - no JSON body // _gets single Thought by ID_
 
-PUT - 'thoughtText' field required as JSON // updates single Thought's 'thoughtText' by ID
+PUT - 'thoughtText' field required as JSON // _updates 'thoughtText' field value for single Thought by ID_
 
-DELETE - no JSON body // deletes a Thought by ID
+DELETE - no JSON body // _deletes a Thought by ID_
 
 `/api/thoughts/<Thought ID>/reactions`
 
-PUT - 'reactionBody' and 'username' fields required as JSON // creates a Reaction and adds it to 'reactions' array of Thought by ID 
+PUT - 'reactionBody' and 'username' fields required as JSON // _creates a Reaction and adds it to 'reactions' array of Thought by ID_
 
 `/api/thoughts/<Thought ID>/reactions/<Reaction ID>`
 
-PUT - no JSON body // removes a Reaction (<Reaction ID>) from 'reactions' array of Thought by ID (<Thought ID>)
+PUT - no JSON body // _removes a Reaction ('Reaction ID') from 'reactions' array of Thought by ID_
 
 
 ## Project Details
