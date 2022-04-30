@@ -80,6 +80,8 @@ PUT - no JSON body // removes a Reaction (<Reaction ID>) from 'reactions' array 
 
 ## Project Details
 
+This repository was created as a weekly challenge for The University of Texas at Austin Code Bootcamp: Full Stack Web Development course.
+
 Technologies used:
 - NodeJS
 - expressJS
@@ -94,7 +96,5 @@ SO THAT my website can handle large amounts of unstructured data
 ```
 
 ## Credits
-
-This repository was created as a weekly challenge for The University of Texas at Austin Code Bootcamp: Full Stack Web Development course.
 
 All code is original and authored by [strudelAndCoffee](https://github.com/strudelAndCoffee), except where cited.
