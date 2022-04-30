@@ -39,12 +39,15 @@ USER Routes
 `/api/users`
 
 GET - no JSON body // gets all Users
+
 POST - 'username' and 'email' fields required as JSON // creates a User
 
 `/api/users/<User ID>`
 
 GET - no JSON body // gets single User by ID
+
 PUT - 'username' and/or 'email' fields required as JSON // updates single User's data by ID
+
 DELETE - no JSON body // deletes a User by ID
 
 `/api/users/<User ID>/friend`
@@ -61,12 +64,15 @@ THOUGHT Routes
 `/api/thoughts`
 
 GET - no JSON body // gets all Thoughts
+
 POST - 'thoughtText' and 'username' fields required as JSON // creates a Thought and adds it to 'thoughts' array of User ('username')
 
 `/api/thoughts/<Thought ID>`
 
 GET - no JSON body // gets single Thought by ID
+
 PUT - 'thoughtText' field required as JSON // updates single Thought's 'thoughtText' by ID
+
 DELETE - no JSON body // deletes a Thought by ID
 
 `/api/thoughts/<Thought ID>/reactions`
