@@ -2,7 +2,10 @@
 
 This project demonstrates functioning API routes for a social media app using a NoSQL database.
 
-You can view the full walkthrough video here: [demo]()
+You can view the full walkthrough videos here: 
+
+[Users and Thoughts demo](https://drive.google.com/file/d/1p1eTLF60LpsoZAaKBMA7V9R0m_sTqfys/view?usp=sharing)
+[Reactions and Friends demo](https://drive.google.com/file/d/1GsUVTCQYkHxjWKbC4aq53HS45l-ytUmx/view?usp=sharing)
 
 ## Description
 
